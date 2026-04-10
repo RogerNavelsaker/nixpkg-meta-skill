@@ -1,0 +1,19 @@
+{
+  "stubbed": false,
+  "source": {
+    "path": "upstream",
+    "version": "0.1.1",
+    "rev": "114c1e250b2c75b99b3d34daadcb7b2c01bb07e5"
+  },
+  "package": {
+    "version": "0.1.1"
+  },
+  "binary": {
+    "name": "ms"
+  },
+  "meta": {
+    "description": "Mine CASS sessions to generate Claude Code skills",
+    "homepage": "https://github.com/Dicklesworthstone/meta_skill",
+    "licenseSpdx": "MIT"
+  }
+}

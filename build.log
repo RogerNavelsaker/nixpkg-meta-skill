@@ -1,0 +1,45 @@
+warning: Git tree '/home/rona/Repositories/@nixpkgs/nixpkg-meta-skill' has uncommitted changes
+warning: ignoring untrusted flake configuration setting 'extra-substituters'.
+Pass '--accept-flake-config' to trust it
+warning: ignoring untrusted flake configuration setting 'extra-trusted-public-keys'.
+Pass '--accept-flake-config' to trust it
+these 3 derivations will be built:
+  /nix/store/3k3yldnlyzjcjjhsj9d2hzrnz6qxgg95-tru-0.2.2.drv
+  /nix/store/7gpzss3kwiyrnmbprffw3xzb147n7gn9-cargo-vendor-dir.drv
+  /nix/store/77xqxa6mjk9pm4wb8biqkc44pa8yyvia-ms-0.1.1.drv
+building '/nix/store/3k3yldnlyzjcjjhsj9d2hzrnz6qxgg95-tru-0.2.2.drv'...
+building '/nix/store/7gpzss3kwiyrnmbprffw3xzb147n7gn9-cargo-vendor-dir.drv'...
+building '/nix/store/77xqxa6mjk9pm4wb8biqkc44pa8yyvia-ms-0.1.1.drv'...
+❌ git+file:///home/rona/Repositories/@nixpkgs/nixpkg-meta-skill#default
+error: Cannot build '/nix/store/77xqxa6mjk9pm4wb8biqkc44pa8yyvia-ms-0.1.1.drv'.
+       Reason: builder failed with exit code 101.
+       Output paths:
+         /nix/store/4cj9zzqq63ssqglnkbndb4nvg96kkbp4-ms-0.1.1
+       Last 25 log lines:
+       >   cargo:rerun-if-env-changed=CC_KNOWN_WRAPPER_CUSTOM
+       >   CC_KNOWN_WRAPPER_CUSTOM = None
+       >   cargo:rerun-if-env-changed=RANLIBFLAGS
+       >   RANLIBFLAGS = None
+       >   cargo:rerun-if-env-changed=HOST_RANLIBFLAGS
+       >   HOST_RANLIBFLAGS = None
+       >   cargo:rerun-if-env-changed=RANLIBFLAGS_x86_64_unknown_linux_gnu
+       >   RANLIBFLAGS_x86_64_unknown_linux_gnu = None
+       >   cargo:rerun-if-env-changed=RANLIBFLAGS_x86_64-unknown-linux-gnu
+       >   RANLIBFLAGS_x86_64-unknown-linux-gnu = None
+       >   running cd "/build/source/target/x86_64-unknown-linux-gnu/release/build/openssl-sys-5b18c58f6e2dafb6/out/openssl-build/build/src" && env -u CROSS_COMPILE AR="ar" CC="/nix/store/hb2bs5fg5wkm04x565737qd5nh2hy5nk-gcc-wrapper-15.2.0/bin/cc" RANLIB="ranlib" "perl" "./Configure" "--prefix=/build/source/target/x86_64-unknown-linux-gnu/release/build/openssl-sys-5b18c58f6e2dafb6/out/openssl-build/install" "--openssldir=/usr/local/ssl" "no-shared" "no-module" "no-tests" "no-comp" "no-zlib" "no-zlib-dynamic" "--libdir=lib" "no-ssl3" "no-md2" "no-rc5" "no-weak-ssl-ciphers" "no-camellia" "no-idea" "no-seed" "linux-x86_64" "-O2" "-ffunction-sections" "-fdata-sections" "-fPIC" "-m64" "-w" "-fno-omit-frame-pointer"
+       >   cargo:warning=configuring OpenSSL build: Command 'perl' not found. Is perl installed?
+       >   cargo:warning=openssl-src: failed to build OpenSSL from source
+       >
+       >   --- stderr
+       >
+       >
+       >
+       >   Error configuring OpenSSL build:
+       >       Command 'perl' not found. Is perl installed?
+       >       Command failed: cd "/build/source/target/x86_64-unknown-linux-gnu/release/build/openssl-sys-5b18c58f6e2dafb6/out/openssl-build/build/src" && env -u CROSS_COMPILE AR="ar" CC="/nix/store/hb2bs5fg5wkm04x565737qd5nh2hy5nk-gcc-wrapper-15.2.0/bin/cc" RANLIB="ranlib" "perl" "./Configure" "--prefix=/build/source/target/x86_64-unknown-linux-gnu/release/build/openssl-sys-5b18c58f6e2dafb6/out/openssl-build/install" "--openssldir=/usr/local/ssl" "no-shared" "no-module" "no-tests" "no-comp" "no-zlib" "no-zlib-dynamic" "--libdir=lib" "no-ssl3" "no-md2" "no-rc5" "no-weak-ssl-ciphers" "no-camellia" "no-idea" "no-seed" "linux-x86_64" "-O2" "-ffunction-sections" "-fdata-sections" "-fPIC" "-m64" "-w" "-fno-omit-frame-pointer"
+       >
+       >
+       >
+       > warning: build failed, waiting for other jobs to finish...
+       For full logs, run:
+         nix log /nix/store/77xqxa6mjk9pm4wb8biqkc44pa8yyvia-ms-0.1.1.drv

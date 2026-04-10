@@ -1,0 +1,21 @@
+---
+source: tests/snapshots/cli_output.rs
+expression: json
+---
+{
+  "status": "ok",
+  "query": "rust",
+  "search_type": "hybrid",
+  "count": 1,
+  "results": [
+    {
+      "id": "rust-error-handling",
+      "name": "Rust Error Handling",
+      "description": "Use Result<T, E> for recoverable errors and panic! for unrecoverable ones.",
+      "layer": "project",
+      "score": 0.008196721,
+      "quality": 0.48500001430511475,
+      "is_deprecated": false
+    }
+  ]
+}

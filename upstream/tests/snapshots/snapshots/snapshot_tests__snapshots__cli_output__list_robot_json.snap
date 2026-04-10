@@ -1,0 +1,43 @@
+---
+source: tests/snapshots/cli_output.rs
+expression: json
+---
+{
+  "status": "ok",
+  "count": 3,
+  "skills": [
+    {
+      "id": "git-workflow",
+      "name": "Git Workflow",
+      "version": "0.1.0",
+      "description": "Standard Git workflow patterns for feature development.",
+      "author": null,
+      "layer": "project",
+      "deprecation_reason": null,
+      "quality_score": 0.3650000095367432,
+      "is_deprecated": false
+    },
+    {
+      "id": "rust-error-handling",
+      "name": "Rust Error Handling",
+      "version": "0.1.0",
+      "description": "Use Result<T, E> for recoverable errors and panic! for unrecoverable ones.",
+      "author": null,
+      "layer": "project",
+      "deprecation_reason": null,
+      "quality_score": 0.48500001430511475,
+      "is_deprecated": false
+    },
+    {
+      "id": "testing-best-practices",
+      "name": "Testing Best Practices",
+      "version": "0.1.0",
+      "description": "Guidelines for writing effective tests.",
+      "author": null,
+      "layer": "project",
+      "deprecation_reason": null,
+      "quality_score": 0.3650000095367432,
+      "is_deprecated": false
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+# Build artifacts
+/target/
+a.out
+*.o
+*.so
+*.dylib
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Coverage
+lcov.info
+tarpaulin-report.html
+coverage/
+
+# Benchmarks
+*.bench
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+temp_*.rs
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test artifacts
+proptest-regressions/
+junit.xml
+
+# Beads
+.beads/*
+!.beads/issues.jsonl
+.bv/
+
+# AI tool history
+.aider.chat.history.md
+
+# Logs
+*.log
+logs/
+
+# Runtime SQLite databases
+storage.sqlite3
+storage.sqlite3-*
+*.sqlite3.bak
+
+# Python bytecode (if any Python scripts used)
+__pycache__/
+*.pyc
+
+# Tantivy index (generated at runtime)
+*.tantivy/
+
+# SQLite databases (user data, not committed)
+*.db
+*.db-shm
+*.db-wal
+
+# Skill cache/state (runtime)
+.ms_cache/
+.ms_state/
+
+# Meta-skill local workspace (runtime state, indexes, proposals)
+.ms/
+
+# Local user modifications (segregated from upstream)
+local_skills/
+
+# Linter output
+clippy_output.json
+
+# Ephemeral/temporary files (agent workflow artifacts)
+RESEARCH_FINDINGS.md
+TOON_INTEGRATION_BRIEF.md
+cov_*.out
+rustc-ice-*.txt
+*.snap.new
+sweep_*.png
+test_screenshot.png
+
+# ACFS ephemeral patterns (auto-generated agent artifacts)
+core
+core.*
+cline.mcp.json
+codex.mcp.json
+cursor.mcp.json
+gemini.mcp.json
+opencode.json
+windsurf.mcp.json
+*.mcp.json.*.bak
+.opencode.json.*.bak
+.windsurf.mcp.json.*.bak
+.agent-mail-project-id
+.agent-mail.yaml
+*.sqlite3.corrupt*
+storage.sqlite3.corrupt-*
+storage.sqlite3-shm.corrupt-*
+storage.sqlite3-wal.corrupt-*
+.beads/*.corrupt*
+.beads/*.pre_repair_*
+.beads/*.repair_candidate_*
+.beads/*.bak-corrupt
