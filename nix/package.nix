@@ -2,10 +2,7 @@
 
 let
   manifest = builtins.fromJSON (builtins.readFile ./package-manifest.json);
-  sourceRoot = builtins.path {
-    path = ../upstream;
-    name = "source";
-  };
+  sourceRoot = ../upstream;
   builtBinary = manifest.binary.upstreamName or manifest.binary.name;
   aliasOutputs = manifest.binary.aliases or [ ];
   aliasScripts = lib.concatMapStrings
