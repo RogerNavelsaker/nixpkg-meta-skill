@@ -7,10 +7,12 @@
     "channel": "github-head",
     "defaultBranch": "main",
     "version": "0.1.1",
-    "rev": "114c1e250b2c75b99b3d34daadcb7b2c01bb07e5",
-    "hash": "sha256-YZoD9wUaFJE/ytST/DdfI1KcgTxG1l4kFbkMVxtOstA="
+    "rev": "096f7336186f148d0abcc4fb59bff71a97740c72",
+    "hash": "sha256-7igph+1/XVQzfmWatvUnZE/y2Enwu6u9SvCiCWYh1Go="
   },
-  "package": {},
+  "package": {
+    "version": "0.1.1"
+  },
   "binary": {
     "name": "ms"
   },
