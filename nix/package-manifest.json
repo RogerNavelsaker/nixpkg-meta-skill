@@ -1,13 +1,16 @@
 {
   "stubbed": false,
   "source": {
-    "path": "upstream",
+    "type": "github",
+    "owner": "Dicklesworthstone",
+    "repo": "meta_skill",
+    "channel": "github-head",
+    "defaultBranch": "main",
     "version": "0.1.1",
-    "rev": "114c1e250b2c75b99b3d34daadcb7b2c01bb07e5"
+    "rev": "114c1e250b2c75b99b3d34daadcb7b2c01bb07e5",
+    "hash": "sha256-YZoD9wUaFJE/ytST/DdfI1KcgTxG1l4kFbkMVxtOstA="
   },
-  "package": {
-    "version": "0.1.1"
-  },
+  "package": {},
   "binary": {
     "name": "ms"
   },
