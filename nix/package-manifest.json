@@ -6,12 +6,12 @@
     "repo": "meta_skill",
     "channel": "github-head",
     "defaultBranch": "main",
-    "version": "0.1.1",
-    "rev": "096f7336186f148d0abcc4fb59bff71a97740c72",
-    "hash": "sha256-7igph+1/XVQzfmWatvUnZE/y2Enwu6u9SvCiCWYh1Go="
+    "version": "0.1.2",
+    "rev": "8351982ee5ac51566f774378024ee96482c52be9",
+    "hash": "sha256-PlpRjCsEdv9lA5I1cEQWXT54VBTt9l3uXLx8KCHk1y0="
   },
   "package": {
-    "version": "0.1.1"
+    "version": "0.1.2"
   },
   "binary": {
     "name": "ms"
