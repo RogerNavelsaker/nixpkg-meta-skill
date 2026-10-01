@@ -60,6 +60,12 @@ rustPlatform.buildRustPackage {
   ];
   doCheck = false;
 
+  # openssl-sys builds its vendored OpenSSL with a direct `perl` lookup.
+  # Keep Perl on PATH for Cargo build scripts as well as the Nix phases.
+  preBuild = ''
+    export PATH="${perl}/bin:$PATH"
+  '';
+
   env = {
     VERGEN_IDEMPOTENT = "1";
     VERGEN_GIT_SHA = manifest.source.rev;
