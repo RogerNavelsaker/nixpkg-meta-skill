@@ -66,7 +66,11 @@ rustPlatform.buildRustPackage {
     export PATH="${perl}/bin:$PATH"
   '';
 
+  # fsqlite-pager enables `core_intrinsics`, and upstream requires nightly Rust.
+  # Allow the stable Nix toolchain to compile this dependency until the package
+  # can select a nightly toolchain directly.
   env = {
+    RUSTC_BOOTSTRAP = "1";
     VERGEN_IDEMPOTENT = "1";
     VERGEN_GIT_SHA = manifest.source.rev;
     VERGEN_GIT_DIRTY = "false";
