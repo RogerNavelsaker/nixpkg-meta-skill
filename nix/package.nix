@@ -46,7 +46,7 @@ rustPlatform.buildRustPackage {
   cargoLock = {
     lockFile = sourceRoot + "/Cargo.lock";
     outputHashes = {
-      "tru-0.2.3" = "sha256-/OQHmPJa+Y6MYLIr2M2cPMKK11yoAsZ3nYgHv9der9U=";
+      "tru-0.2.3" = "sha256-dUVmNNscWCBmkBA8oN9/x+ue7UhoSQ+0MLphOnIdsSk=";
     };
   };
 
