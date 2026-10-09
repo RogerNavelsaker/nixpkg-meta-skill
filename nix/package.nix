@@ -46,7 +46,7 @@ rustPlatform.buildRustPackage {
   cargoLock = {
     lockFile = sourceRoot + "/Cargo.lock";
     outputHashes = {
-      "tru-0.2.2" = "sha256-/OQHmPJa+Y6MYLIr2M2cPMKK11yoAsZ3nYgHv9der9U=";
+      "tru-0.2.3" = "sha256-dUVmNNscWCBmkBA8oN9/x+ue7UhoSQ+0MLphOnIdsSk=";
     };
   };
 
@@ -60,7 +60,17 @@ rustPlatform.buildRustPackage {
   ];
   doCheck = false;
 
+  # openssl-sys builds its vendored OpenSSL with a direct `perl` lookup.
+  # Keep Perl on PATH for Cargo build scripts as well as the Nix phases.
+  preConfigure = ''
+    export PATH="${perl}/bin:$PATH"
+  '';
+
+  # fsqlite-pager enables `core_intrinsics`, and upstream requires nightly Rust.
+  # Allow the stable Nix toolchain to compile this dependency until the package
+  # can select a nightly toolchain directly.
   env = {
+    RUSTC_BOOTSTRAP = "1";
     VERGEN_IDEMPOTENT = "1";
     VERGEN_GIT_SHA = manifest.source.rev;
     VERGEN_GIT_DIRTY = "false";
