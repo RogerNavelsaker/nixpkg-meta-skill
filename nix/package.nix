@@ -60,6 +60,12 @@ rustPlatform.buildRustPackage {
   ];
   doCheck = false;
 
+  # cargoBuildHook passes `-j $NIX_BUILD_CORES`; release LTO + codegen-units=1
+  # on asupersync gets SIGKILLed (OOM) when 4 crates build at once on the CI runner.
+  preBuild = ''
+    export NIX_BUILD_CORES=2
+  '';
+
   env = {
     VERGEN_IDEMPOTENT = "1";
     VERGEN_GIT_SHA = manifest.source.rev;
