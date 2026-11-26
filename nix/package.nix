@@ -46,7 +46,7 @@ rustPlatform.buildRustPackage {
   cargoLock = {
     lockFile = sourceRoot + "/Cargo.lock";
     outputHashes = {
-      "tru-0.2.2" = "sha256-/OQHmPJa+Y6MYLIr2M2cPMKK11yoAsZ3nYgHv9der9U=";
+      "tru-0.3.0" = "sha256-pWAQ65zHg8BM91DAWXtb9rZIkoawTQgGE/HuW5fGZqU=";
     };
   };
 
@@ -59,6 +59,12 @@ rustPlatform.buildRustPackage {
     perl
   ];
   doCheck = false;
+
+  # cargoBuildHook passes `-j $NIX_BUILD_CORES`; release LTO + codegen-units=1
+  # on asupersync gets SIGKILLed (OOM) when 4 crates build at once on the CI runner.
+  preBuild = ''
+    export NIX_BUILD_CORES=2
+  '';
 
   env = {
     VERGEN_IDEMPOTENT = "1";
